@@ -1,0 +1,65 @@
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link rel='stylesheet' href='../static/style.css'>
+  <script src='../static/client.js'></script>
+</head>
+<body>
+<div>
+  <div class='center'>
+    <div class='title'>Bonne...ou pas bonne?</div>
+    <p>
+      Mettez votre image pour voir si vous etes <strong>bonne</strong> 
+      ou si vous etes un <strong>beau gosse</strong>
+    </p>
+    <p>
+      Vous allez voir ce que l'Intelligence Artificielle pense de vous!
+    </p>
+    <p>
+      Il faut mettre une image avec juste le visage SVP. Donc ca sert a rien de rentrer le ventre.
+    </p>
+    <p>
+      Resultat, entre <strong>1</strong> et <strong>5</strong>
+    </p>
+    <p>
+      5: trop bonne
+    </p>
+    <p>
+      4: t'es bonne
+    </p>
+    <p>
+      3: t'es pas mal
+    </p>
+    <p>
+      2:essaye une autre photo
+    </p>
+    <p>
+      1: tu fais peur
+    </p>
+    <div class='content'>
+      <div class='no-display'>
+        <input id='file-input'
+               class='no-display'
+               type='file'
+               name='file'
+               accept='image/*'
+               onchange='showPicked(this)'>
+      </div>
+      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+      <div class='upload-label'>
+        <label id='upload-label'>No file chosen</label>
+      </div>
+      <div>
+        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+      </div>
+      <div class='analyze'>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+      </div>
+      <div class='result-label'>
+        <label id='result-label'></label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
